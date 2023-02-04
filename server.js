@@ -38,11 +38,11 @@ app.all("*", (req, res) => {
 
 // mongodb connection
 mongoose.set('strictQuery', false)
-// mongoose.connect( URL, options ).then((result) => {
-//     app.listen(PORT , (req , res) => {
-//         console.log(`Server has started successfully on port: ${PORT}`);
-//     })
-// })
-// .catch((err) => {
-//     console.log(`Server error -> ${err}`);
-// });
+mongoose.connect( URL, options ).then((result) => {
+    app.listen(PORT , (req , res) => {
+        console.log(`Server has started successfully on port: ${PORT}`);
+    })
+})
+.catch((err) => {
+    console.log(`Server error -> ${err}`);
+});
