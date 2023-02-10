@@ -1,5 +1,4 @@
-require('dotenv').config();
-
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -35,7 +34,7 @@ app.use("/udit", routes_by_udit);
 // app.use("/bhavika", routes_by_bhavika);
 // app.use("/abhishek", routes_by_abhishek);
 // app.use("/sagar", routes_by_sagar);
-// app.use("/swaroop", routes_by_swaroop);
+app.use("/swaroop", routes_by_swaroop);
 
 // home route
 app.get("/", (req, res) => {
