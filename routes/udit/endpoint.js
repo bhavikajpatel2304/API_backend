@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator');
 
 const router = express.Router();
 
-router.post("/register-admin", 
+router.post("/register-admin",
 
     [
         body("email").isEmail().withMessage("Email format is incorrect"),
@@ -28,7 +28,7 @@ router.post("/register-admin",
             );
         }
 
-
+        const response = controller.registerAdmin();
     }
 );
 
